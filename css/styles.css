@@ -1,0 +1,26 @@
+@import url(./normalize.css);
+
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+
+/* Typography */
+
+.html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --color-Very-Dark-Gray: hsl(0, 0%, 17%);
+    --color-Dark-Gray: hsl(0, 0%, 59%);
+}
+
+
