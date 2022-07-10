@@ -1,4 +1,6 @@
+@import url(https://unpkg.com/leaflet@1.8.0/dist/leaflet.css);
 @import url(./normalize.css);
+
 
 
 *,*::after,*::before{
@@ -9,13 +11,14 @@
 
 /* Typography */
 
-.html{
+html{
     font-size: 62.5%;
 }
 
 body{
     font-size: 1.8rem;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 :root{
@@ -28,16 +31,168 @@ body{
 
 /* Layout */
 
-.head-box{
-    height: 30vh;
+.header{
+    height: 40vh;
+    background: url(/images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 } 
 
-.head-box img{
-    width: 100%;
-    height: 100%;
-}
+
 
 #map { 
-    height: 70vh; 
+    height: 60vh; 
+    position: relative;
+    z-index: 5;
 }
+
+
+/* Ip search heading */
+
+.page-heading{
+    font-weight: 500;
+    margin-top: 0;
+    color: white;
+    position: relative;
+    top: 30px;
+}
+
+
+@media screen and (max-width:1023px) {
+    .page-heading{
+        font-size: 2rem;
+    }
+}
+
+
+/* search Box */
+
+.icon--arrow{
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+}
+
+.icon--arrow svg{
+    transform: scale(0.8);
+}
+
+.search-box{
+    display: flex;
+    background-color: white;
+    margin: 5rem 2rem 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-box input{
+    flex-grow: 1;
+    width: 0;
+    margin: 1.2rem 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--color-Very-Dark-Gray);
+}
+
+
+
+/* Ip display */
+
+.ip-display{
+    background-color: white;
+    margin: 2rem;
+    border-radius: 10px;
+    padding: 2.5rem 4rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.key-value-pair:first-of-type{
+    margin: 0;
+}
+
+.key-value-pair{
+    margin-top: 2rem;
+}
+
+.key{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    color: var(--color-Dark-Gray);
+    margin: 0;
+}
+
+.value{
+    font-weight: 500;
+    margin: 0;
+    margin-top: 0.5rem;
+    overflow-wrap: break-word;
+}
+
+.ip-display--hidden{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px) {
+    .ip-display{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 4rem auto;
+        padding: 2rem;
+    }
+    .key-value-pair{
+        margin-top: 0;
+        padding: 2rem;
+        border-left: 2px solid rgb(217, 217, 217);
+    }
+    .key-value-pair:first-of-type{
+        margin: 0;
+        border: 0;
+    }
+
+    .key{
+        margin-bottom: 1rem;
+    }
+
+    .search-box{
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body{
+        text-align: left;
+    }
+
+    .page-heading{
+        text-align: center;
+    }
+
+    #map{
+        height: 65vh;
+    }
+    .header{
+        height: 35vh;
+    }
+    .key{
+        font-size: 1rem;
+    }
+}
+
+
+
 

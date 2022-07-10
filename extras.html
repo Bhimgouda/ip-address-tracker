@@ -17,37 +17,19 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="page-heading">IP Address Tracker</h1>
-      <div class="search-box">
-        <input type="text" placeholder="Custom IP Address" />
-        <span class="icon--arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14">
-            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
-          </svg>
-        </span>
-      </div>
-      <div class="ip-display">
-        <div class="key-value-pair" id="ip-address">
-          <p class="key">ip address</p>
-          <p class="value">115.240.90.163</p>
-        </div>
-        <div class="key-value-pair" id="location">
-          <p class="key">location</p>
-          <p class="value">Airoli, Maharashtra, IN</p>
-        </div>
-        <div class="key-value-pair" id="timezone">
-          <p class="key">timezone</p>
-          <p class="value">Asia/Kolkata</p>
-        </div>
-        <div class="key-value-pair" id="isp">
-          <p class="key">isp</p>
-          <p class="value">broadband.actcorp.in</p>
-        </div>
-      </div>
+    <header class="head-box">
+      <img src="./images/pattern-bg.png" alt="" />
+      <div class="ip-search"></div>
+      <div class="ip-display"></div>
     </header>
     <div id="map"></div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
