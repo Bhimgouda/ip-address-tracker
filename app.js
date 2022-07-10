@@ -48,8 +48,7 @@ window.addEventListener('keyup',event=>{
 
 
 
-
-
+/**************** ALL FUNCTIONS THAT MAKE EVERYTHING HAPPEN ************************/
 
 
 
@@ -87,7 +86,6 @@ async function displayIpAddress(ipAddress){
         console.log(err)
     }
 }
-
 
 
 /* Changing map tile and marker according to data.json */
