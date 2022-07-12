@@ -86,7 +86,7 @@ async function displayIpAddress(ipAddress){
         else{
             userIsp.textContent = `Not Available`;
         }
-        userInput.value = data.ip;
+        userInput.value = ``;
     }
     catch(err){
         console.log(err)
