@@ -10,7 +10,7 @@ const ipDisplay = document.querySelector('.ip-display');
 
 /* Changing map marker Icon of map*/
 const myIcon = L.icon({
-    iconUrl: '/src/images/icon-location.svg',
+    iconUrl: './images/icon-location.svg',
     iconSize: [30,40],
     iconAnchor: [16,42]
 });
@@ -76,6 +76,7 @@ async function getIpAddress(ipAddress){
 async function displayIpAddress(ipAddress){
     try{
         let data = await getIpAddress(ipAddress);
+        console.log(data);
         userIp.textContent = `${data.ip}`;
         userLocation.textContent = `${data.city}, ${data.region}, ${data.country}`;
         userTimezone.textContent = `${data.timezone}`;
@@ -113,7 +114,6 @@ async function locationOnMap(ipAddress){
         console.log(err)
     }
 }
-
 
 
 
