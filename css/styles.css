@@ -33,7 +33,7 @@ body{
 
 .header{
     height: 40vh;
-    background: url(/dist/images/pattern-bg.webp);
+    background: url(/images/pattern-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
 } 
@@ -192,6 +192,5 @@ body{
         font-size: 1rem;
     }
 }
-
 
 
