@@ -10,7 +10,7 @@ const ipDisplay = document.querySelector('.ip-display');
 
 /* Changing map marker Icon of map*/
 const myIcon = L.icon({
-    iconUrl: '/images/icon-location.svg',
+    iconUrl: '/src/images/icon-location.svg',
     iconSize: [30,40],
     iconAnchor: [16,42]
 });
@@ -79,7 +79,12 @@ async function displayIpAddress(ipAddress){
         userIp.textContent = `${data.ip}`;
         userLocation.textContent = `${data.city}, ${data.region}, ${data.country}`;
         userTimezone.textContent = `${data.timezone}`;
-        userIsp.textContent = `${data.hostname}`;
+        if(data.hostname){
+            userIsp.textContent = `${data.hostname}`;
+        }
+        else{
+            userIsp.textContent = `Not Available`;
+        }
         userInput.value = data.ip;
     }
     catch(err){
